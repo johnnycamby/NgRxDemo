@@ -1,0 +1,9 @@
+
+<div>
+  <app-shopping-list [errorMsg]="errorMsg$ | async" [shoppingList]="shoppingList$ | async" [selectedItem]="selectedItem$ | async" (selected)="itemSelected($event)"></app-shopping-list>
+</div>
+<div>
+  <item-details [selectedItem]="selectedItem$ | async">
+
+  </item-details>
+</div>

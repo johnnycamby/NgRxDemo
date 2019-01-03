@@ -1,0 +1,25 @@
+
+<div class="tb">
+  <kendo-grid [data]="shoppingList"  [height]="410">
+    <kendo-grid-column field="sortId" title="Pos Nr" width="80"></kendo-grid-column>
+    <kendo-grid-column field="eklId" title="Shl ID" width="80"></kendo-grid-column>
+    <kendo-grid-column field="fullName" title="Shl Name"  width="120"></kendo-grid-column>
+    <kendo-grid-column field="bez" title="Shl User" width="120"></kendo-grid-column>
+    <kendo-grid-column field="sysChangeDat" title="Change Date" width="120"></kendo-grid-column>    
+    <kendo-grid-column field="countPos" title="Count Article" width="120"></kendo-grid-column>
+    <kendo-grid-column field="anzahlArtAus" title="Count Fal Article" width="150"></kendo-grid-column>
+    <kendo-grid-column field="anzahlBEDirty" title="Count Fal Unit" width="120"></kendo-grid-column>
+    <kendo-grid-column field="vklId" title="Vkl ID" width="80"></kendo-grid-column>
+    <kendo-grid-column field="eklArtID" title="Typ ID" width="80"></kendo-grid-column>
+    <kendo-grid-column field="mitMenge" title="Count With Values" width="150"></kendo-grid-column>
+    <kendo-grid-column field="turnus" title="Turnus" width="80"></kendo-grid-column>    
+    <kendo-grid-column width= "70">
+      <ng-template kendoGridCellTemplate let-shitem>        
+          <button 
+          [ngClass]="{'isactive' : shitem?.shlID === selectedItem?.shlID}"
+          (click)="itemSelected(shitem)"
+          >Details</button>       
+      </ng-template>
+    </kendo-grid-column>
+  </kendo-grid>
+</div>
